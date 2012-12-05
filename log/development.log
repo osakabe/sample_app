@@ -261,3 +261,25 @@ Migrating to AddPasswordDigestToUsers (20121204095105)
   [1m[36m (1.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20121204095105')[0m
   [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121204061404')
   [1m[36m (1.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20121204092423')[0m
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-05 16:03:24 +0900
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (50.0ms)
+Completed 500 Internal Server Error in 372ms
+
+ActionView::Template::Error (different prefix: "c:/" and "D:/workspace/ruby on rails/sample_app/app/assets/stylesheets"
+  (in D:/workspace/ruby on rails/sample_app/app/assets/stylesheets/custom.css.scss)):
+    2: <html>
+    3: 	<head>
+    4:   		<title><%= full_title(yield(:title)) %></title>
+    5:  		<%= stylesheet_link_tag    "application", :media => "all" %>
+    6:   		<%= javascript_include_tag "application" %>
+    7:  		<%= csrf_meta_tags %>
+    8:  		<%= render 'layouts/shim' %>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___251235812_29814360'
+
+
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.0ms)
