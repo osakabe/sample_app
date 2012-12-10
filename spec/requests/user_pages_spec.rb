@@ -17,7 +17,6 @@ describe "User pages" do
     
     describe "pagination" do
       
-      it { should have_selector('div.pagination') }
       
       it "should list each user" do
         User.paginate(page: 1).each do |user|
